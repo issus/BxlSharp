@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Threading.Tasks;
 using BxlSharp.Parsing;
 using BxlSharp.Types;
 
@@ -106,6 +107,18 @@ namespace BxlSharp
         }
 
         /// <summary>
+        /// Returns a BxlDocument from parsing a BXL file.
+        /// </summary>
+        /// <param name="fileName">File to be read.</param>
+        /// <param name="fileType">Indicates the file type.</param>
+        /// <param name="progress">Allows reporting progress for large files.</param>
+        public static async Task<BxlDocument> ReadFromFileAsync(string fileName, BxlFileType fileType = BxlFileType.FromExtension, IProgress<int> progress = null)
+        {
+            var text = await DecodeFileAsync(fileName, fileType);
+            return ReadFromText(text, fileName, progress);
+        }
+
+        /// <summary>
         /// Returns a BxlDocument from parsing the text representation of a BXL file that has been already decoded. 
         /// </summary>
         /// <param name="text">Text representation of the BXL contents.</param>
@@ -143,6 +156,21 @@ namespace BxlSharp
             else
             {
                 return File.ReadAllText(fileName);
+            }
+        }
+
+        /// <summary>
+        /// Decodes BXL's adaptive huffman encoded data from file and returns its text representation.
+        /// </summary>
+        public static async Task<string> DecodeFileAsync(string fileName, BxlFileType fileType = BxlFileType.FromExtension)
+        {
+            if (IsBinary(fileName, fileType))
+            {
+                return DecodeBxl(await File.ReadAllBytesAsync(fileName));
+            }
+            else
+            {
+                return await File.ReadAllTextAsync(fileName);
             }
         }
 
