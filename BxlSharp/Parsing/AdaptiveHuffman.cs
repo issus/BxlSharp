@@ -1,6 +1,6 @@
 ﻿using System.Text;
 
-namespace BxlSharp
+namespace OriginalCircuit.BxlSharp
 {
     /// <summary>
     /// Performs the decoding of data stored using adaptive huffman coding.

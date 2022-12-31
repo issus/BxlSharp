@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace BxlSharp.Types
+namespace OriginalCircuit.BxlSharp.Types
 {
     public class Pattern
     {

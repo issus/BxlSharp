@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace BxlSharp.Types
+namespace OriginalCircuit.BxlSharp.Types
 {
     public class NetInstance
     {

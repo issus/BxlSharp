@@ -1,4 +1,4 @@
-﻿namespace BxlSharp.Types
+﻿namespace OriginalCircuit.BxlSharp.Types
 {
     public class InstTextItem : InstItem
     {

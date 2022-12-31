@@ -4,9 +4,9 @@ using System.Globalization;
 using System.Linq;
 using System.Runtime.Serialization;
 using System.Text.RegularExpressions;
-using BxlSharp.Parsing;
+using OriginalCircuit.BxlSharp.Parsing;
 
-namespace BxlSharp.Parser
+namespace OriginalCircuit.BxlSharp.Parser
 {
     public enum Token
     {

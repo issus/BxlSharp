@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace BxlSharp.Types
+namespace OriginalCircuit.BxlSharp.Types
 {
     public readonly struct Point : IEquatable<Point>
     {

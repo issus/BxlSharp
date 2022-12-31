@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace BxlSharp
+namespace OriginalCircuit.BxlSharp
 {
     /// <summary>
     /// List of information about the BXL data read, including errors encountered.

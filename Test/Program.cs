@@ -1,7 +1,7 @@
 ﻿using System;
 using System.IO;
 using System.Linq;
-using BxlSharp;
+using OriginalCircuit.BxlSharp;
 
 namespace Test
 {

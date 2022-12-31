@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
-using BxlSharp.Parsing;
-using BxlSharp.Types;
+using OriginalCircuit.BxlSharp.Parsing;
+using OriginalCircuit.BxlSharp.Types;
 
-namespace BxlSharp
+namespace OriginalCircuit.BxlSharp
 {
     public enum BxlFileType
     {

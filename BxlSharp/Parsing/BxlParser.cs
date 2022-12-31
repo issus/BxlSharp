@@ -5,10 +5,10 @@ using System.Linq;
 using System.Reflection;
 using System.Runtime.Serialization;
 using System.Text.RegularExpressions;
-using BxlSharp.Parser;
-using BxlSharp.Types;
+using OriginalCircuit.BxlSharp.Parser;
+using OriginalCircuit.BxlSharp.Types;
 
-namespace BxlSharp.Parsing
+namespace OriginalCircuit.BxlSharp.Parsing
 {
     /// <summary>
     /// Parser for the BXL textual representation.

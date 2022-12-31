@@ -1,0 +1,27 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+	  <TargetFramework>net6.0</TargetFramework>
+	  <Title>UltraLibrarian BXL Library Reader</Title>
+	  <Company>Original Circuit Limited</Company>
+	  <Authors>OriginalCircuit</Authors>
+	  <Description>Allows the opening and reading of UltraLibrarian BXL files.</Description>
+	  <Copyright>Copyright 2020-2023 Original Circuit Limited. Released under MIT License.</Copyright>
+	  <PackageProjectUrl>https://github.com/issus/BxlSharp</PackageProjectUrl>
+	  <RepositoryUrl>https://github.com/issus/BxlSharp</RepositoryUrl>
+	  <PackageTags>ultralibrarian; electronics; library; bxl</PackageTags>
+	  <PackageReleaseNotes>Initial Release</PackageReleaseNotes>
+	  <PackageLicenseExpression>MIT</PackageLicenseExpression>
+	  <PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
+	  <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+	  <PackageReadmeFile>README.md</PackageReadmeFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="..\README.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
+
+</Project>
