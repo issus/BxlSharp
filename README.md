@@ -19,8 +19,10 @@ To add the OriginalCircuit.BxlSharp library to a .NET project using the Package 
 # Usage
 To use the Ultralibrarian Reader .NET Library in your .NET project, you will need to include the following using statements at the top of your source file:
 
+```C#
     using OriginalCircuit.BxlSharp;
     using OriginalCircuit.BxlSharp.Types;
+```
 
 These using statements bring the classes and types from the `OriginalCircuit.BxlSharp` and `OriginalCircuit.BxlSharp.Types` namespaces into scope, allowing you to use them in your code without having to specify the full namespace every time.
 
@@ -29,14 +31,17 @@ Once you have included these using statements, you can use the classes and types
 ## Opening BXL Files
 Here's an example of how to open an UltraLibrarian file:
 
+```C#
     // Open the Ultralibrarian file  
     var data = await  BxlDocument.ReadFromFileAsync(fileName, BxlFileType.FromExtension);
+```
 
 This code opens the UltraLibrarian file with the specified `fileName` and returns the data as a `BxlDocument` object. The `BxlFileType.FromExtension` parameter tells the library to determine the file type based on the file extension.
 
 ## Reading Pin Information From All Symbols
 To read the pin information for each symbol in the UltraLibrarian file, you can use the following code:
 
+```C#
     // Loop through each symbol in the file 
     foreach (var  symbol  in data.Symbols) 
     { 
@@ -49,6 +54,7 @@ To read the pin information for each symbol in the UltraLibrarian file, you can 
      
         //further process the pin list
      }
+ ```
 
 In this example, the `Pin` class is a custom class that is defined in the user's code and has a `Designator` and `Name` property. The `LibPin` objects are converted to `Pin` objects by creating a new `Pin` object and passing in the `Designator` and `Name` values from the `LibPin` object. The resulting `Pin` objects are then added to a `List<Pin>` object.
 
